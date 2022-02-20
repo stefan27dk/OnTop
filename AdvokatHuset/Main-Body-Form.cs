@@ -109,14 +109,12 @@ namespace View_GUI
                   p = Process.Start(info);
                   p.WaitForInputIdle();
 
- 
-                 
 
 
-                  //CenterToScreen();
-                  
-                  SetParent(p.MainWindowHandle, Main_Body_Loader_panel.Handle);
-                  MoveWindow(p.MainWindowHandle, 0, 0, this.Width, this.Height, true); 
+
+
+                //CenterToScreen();
+                ReloadExternalApp();
             }
 
 
@@ -145,6 +143,43 @@ namespace View_GUI
 
 
         
+
+        // Remove window Border
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -807,7 +842,7 @@ namespace View_GUI
         {
             if (externalAppPath != "")
             {
-                MoveWindow(p.MainWindowHandle, 0, 0, this.Width, this.Height, true);
+                MoveWindow(p.MainWindowHandle, -8, -30, this.Width, this.Height - 35, true);
             }
         }
 
@@ -820,9 +855,7 @@ namespace View_GUI
             LoadExternalApplication();
 
             Thread.Sleep(2000);
-            SetParent(p.MainWindowHandle, Main_Body_Loader_panel.Handle);
-            MoveWindow(p.MainWindowHandle, 0, 0, this.Width, this.Height, true);
-
+            ReloadExternalApp();
         }
 
 
@@ -851,13 +884,16 @@ namespace View_GUI
         // Reload External App
         private void reload_externalApp_Click(object sender, EventArgs e)
         {
-            SetParent(p.MainWindowHandle, Main_Body_Loader_panel.Handle);
-            MoveWindow(p.MainWindowHandle, 0, 0, this.Width, this.Height, true);
+            ReloadExternalApp();
         }
 
 
 
-
+        private void ReloadExternalApp()
+        {
+            SetParent(p.MainWindowHandle, Main_Body_Loader_panel.Handle);
+            MoveWindow(p.MainWindowHandle, -8, -30, this.Width, this.Height - 35, true);
+        }
         // ADD - Transparency Form -------::END::------------------------------------------------------
 
 
