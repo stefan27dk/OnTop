@@ -1561,6 +1561,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Actions-reload-icon.png" />
+    <None Include="Resources\broom-clear-icon.png" />
     <None Include="Resources\reload-orange.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

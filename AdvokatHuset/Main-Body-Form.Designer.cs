@@ -36,6 +36,7 @@
             this.opacity_min_button = new System.Windows.Forms.Button();
             this.opacity_max_button = new System.Windows.Forms.Button();
             this.TitleBar_panel = new System.Windows.Forms.Panel();
+            this.clearExternalApp = new System.Windows.Forms.Button();
             this.reload_externalApp = new System.Windows.Forms.Button();
             this.Add_Ttransparent_form_button = new System.Windows.Forms.Button();
             this.close_form_button = new System.Windows.Forms.Button();
@@ -185,6 +186,7 @@
             this.TitleBar_panel.BackgroundImage = global::View_GUI.Properties.Resources._23424;
             this.TitleBar_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TitleBar_panel.CausesValidation = false;
+            this.TitleBar_panel.Controls.Add(this.clearExternalApp);
             this.TitleBar_panel.Controls.Add(this.reload_externalApp);
             this.TitleBar_panel.Controls.Add(this.Add_Ttransparent_form_button);
             this.TitleBar_panel.Controls.Add(this.close_form_button);
@@ -201,6 +203,29 @@
             this.TitleBar_panel.Size = new System.Drawing.Size(1608, 38);
             this.TitleBar_panel.TabIndex = 1;
             this.TitleBar_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseDown);
+            // 
+            // clearExternalApp
+            // 
+            this.clearExternalApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearExternalApp.BackColor = System.Drawing.Color.Transparent;
+            this.clearExternalApp.BackgroundImage = global::View_GUI.Properties.Resources.broom_clear_icon;
+            this.clearExternalApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.clearExternalApp.FlatAppearance.BorderSize = 0;
+            this.clearExternalApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.clearExternalApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.clearExternalApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearExternalApp.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clearExternalApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.clearExternalApp.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.clearExternalApp.Location = new System.Drawing.Point(1349, 3);
+            this.clearExternalApp.Margin = new System.Windows.Forms.Padding(0);
+            this.clearExternalApp.Name = "clearExternalApp";
+            this.clearExternalApp.Size = new System.Drawing.Size(36, 32);
+            this.clearExternalApp.TabIndex = 12;
+            this.clearExternalApp.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.clearExternalApp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.clearExternalApp.UseVisualStyleBackColor = false;
+            this.clearExternalApp.Click += new System.EventHandler(this.clearExternalApp_Click);
             // 
             // reload_externalApp
             // 
@@ -502,5 +527,6 @@
         private System.Windows.Forms.Button opacity_25_percent_button;
         private System.Windows.Forms.Button Add_Ttransparent_form_button;
         private System.Windows.Forms.Button reload_externalApp;
+        private System.Windows.Forms.Button clearExternalApp;
     }
 }

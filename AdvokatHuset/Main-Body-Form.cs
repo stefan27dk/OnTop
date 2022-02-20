@@ -854,8 +854,13 @@ namespace View_GUI
             externalAppPath = filePaths[0];
             LoadExternalApplication();
 
-            Thread.Sleep(2000);
-            ReloadExternalApp();
+            int count = 0;
+            while(count < 5)
+            {
+                ReloadExternalApp();
+                Thread.Sleep(500);
+                count++;
+            }
         }
 
 
@@ -874,9 +879,16 @@ namespace View_GUI
         }
 
         private void Main_Body_Form_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            p.Kill();
-            p.Dispose();
+        {  
+            try
+            {
+               p.Kill();
+               p.Dispose();
+            }
+            catch(Exception)
+            {
+
+            }
         }
 
 
@@ -893,6 +905,19 @@ namespace View_GUI
         {
             SetParent(p.MainWindowHandle, Main_Body_Loader_panel.Handle);
             MoveWindow(p.MainWindowHandle, -8, -30, this.Width, this.Height - 35, true);
+        }
+
+        private void clearExternalApp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                p.Kill();
+                p.Dispose();
+            }
+            catch (Exception)
+            {
+
+            }
         }
         // ADD - Transparency Form -------::END::------------------------------------------------------
 

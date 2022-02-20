@@ -1083,6 +1083,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap broom_clear_icon {
+            get {
+                object obj = ResourceManager.GetObject("broom-clear-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cabriolet_icon {
             get {
                 object obj = ResourceManager.GetObject("Cabriolet-icon", resourceCulture);
